@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SendMail</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+</head>
+<script>
+    function SendMail() {
+        debugger;
+        $.ajax({
+            url: '/SendMail/Test',
+            method:'GET',
+            succrss: function () {
+               alert('111111111111111111111');
+            },
+            error: function () {
+               alert('22222222222222222222222');
+            }
+        });
+    }
+</script>
+<body>
+    <div> 
+        <button id="bt"onclick="SendMail()">邮件重发</button>
+    </div>
+</body>
+</html>
